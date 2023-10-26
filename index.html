@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="./p5.play.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <style>
+        /* Your CSS styles here */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font_new.ttf') format('truetype');
+            /* Add additional font formats here if needed */
+        }
+
+        body {
+            font-family: 'CustomFont', Arial, sans-serif;
+            background-color: #ffeecc;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        ul {
+            text-align: left;
+            list-style-type: disc;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        /* Reload button styles */
+        #reload-button {
+            position: absolute;
+            top: 20px;
+            left: 280px;
+            background-color: #FF6B6B; /* Light red color */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+            transition: background-color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        #reload-button:hover {
+            background-color: #FF4646; /* Slightly darker red color on hover */
+        }
+
+        /* Reload button container styles */
+        #reload-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+        <!-- <source src="bg.mp3" type="audio/mpeg"> -->
+        Your browser does not support the audio element.
+    </audio>
+    <div class="recipe-container">
+        <div id="reload-button-container">
+            <p>A delightful Cappuccino Recipe</p>
+            <button id="reload-button">↻</button>
+        </div>
+        <ul>
+            <li>Prepare a shot of espresso.</li>
+            <li>Add sugar</li>
+            <li>Add creamy froth milk</li>
+            <li>Add normal milk</li>
+            <li>Sprinkle cocoa powder on top</li>
+        </ul>
+        <!-- <video width="100" height="100" controls autoplay>
+            <source src="talk.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+
+        <script src="sketch.js"></script>
+        <script>
+            // JavaScript to reload the page when the button is clicked
+            const reloadButton = document.getElementById('reload-button');
+            reloadButton.addEventListener('click', function () {
+                location.reload();
+            });
+        </script>
+    </div>
+</body>
+</html>
