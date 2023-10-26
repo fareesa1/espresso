@@ -150,7 +150,7 @@ ellipse(180,180,250,140,80,80)
 fill("white")
 text("CONGRATULATIONS's🎊",90,160)
 text("YOU DID IT",130,180)
-text("ESPRESSO'S READY ☕",110,200)
+text("CAPPUCCINO'S READY ☕",110,200)
 girl_talking.addAnimation("upset", girl_talking_upset)
   } else if(score == 90 || score == 80 || score == 70){
     noStroke()
