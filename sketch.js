@@ -17,6 +17,7 @@ function setup() {
   talkingGirl.addAnimation('upset', girl_talking_upset);
   talkingGirl.animation.frameDelay = 15; // Set the frame delay
   talkingGirl.scale = 0.4
+  talkingGirl.visible = false
   createSprites();
   backgroundMusic.setVolume(0.5)
   backgroundMusic.play()
